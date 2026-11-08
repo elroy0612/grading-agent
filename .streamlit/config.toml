@@ -1,0 +1,10 @@
+[theme]
+primaryColor = "#0057A8"
+
+[server]
+maxUploadSize = 50
+
+[client]
+toolbarMode = "minimal"
+# 예기치 못한 오류가 나도 사용자 화면에 traceback(코드 경로)을 노출하지 않음
+showErrorDetails = "type"

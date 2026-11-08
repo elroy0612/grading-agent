@@ -1,0 +1,24 @@
+# 마감(11/11)까지 Cloud 재배포 시 버전이 바뀌지 않도록 검증된 조합으로 고정
+# (venv에서 설치 + pip check 통과 확인). Streamlit Cloud는 Python 3.12 선택.
+
+# ── Web / 배포 ─────────────────────────────
+streamlit==1.67.0          # st.navigation / st.Page, chat UI, write_stream
+
+# ── 데이터 처리 / 엑셀 ─────────────────────
+pandas==3.1.1
+numpy==2.5.4               # Requires-Python >=3.12
+openpyxl==3.1.5            # OMR .xlsx 읽기 + 결과 엑셀 쓰기(서식 포함)
+
+# ── PDF 파싱 (정답표 · 문제지) ─────────────
+pdfplumber==0.11.10
+
+# ── LLM Agent (OpenAI + LangChain) ────────
+langchain==1.4.9           # create_agent
+langchain-core==1.7.6
+langchain-openai==1.7.4    # ChatOpenAI (requires openai>=2.45.0)
+langgraph==1.2.20
+openai==2.54.0
+httpx==0.28.1              # agent.py에서 직접 import (타임아웃 설정)
+
+# ── 설정 ──────────────────────────────────
+python-dotenv==1.2.4       # 로컬 .env 로드 (Cloud에서는 st.secrets 사용)
