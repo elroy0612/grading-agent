@@ -7,7 +7,7 @@
 |---|---|
 | 학번 | `202235854` |
 | 이름 | `권현석` |
-| 배포 URL | `https://(배포 후 입력).streamlit.app` |
+| 배포 URL | https://grading-agent-202235854.streamlit.app/ |
 
 ## 주요 기능
 
